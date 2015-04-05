@@ -1,6 +1,8 @@
 import os
 from flask import Flask, render_template
 from flask import request
+import CreateCsvTable
+from CreateCsvTable import createTable
 
 # initialization
 app = Flask(__name__)
@@ -49,6 +51,8 @@ def homepage():
 		paragraph.append(radios)
 
 	try:
+		if selectmultipleSecurity and selectmultipleField and startDate and endDate and radios:
+			createTable(selectmultipleSecurity, selectmultipleField, startDate, endDate, radios)
 		return render_template("test.html", title = title, paragraph=paragraph)
 	except Exception, e:
 		return str(e)

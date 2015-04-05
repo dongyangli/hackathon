@@ -1,0 +1,73 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4788 (0x12b4)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, ST=NY, L=New York, O=Bloomberg LP, OU=CTO Office, CN=Bloomberg LP CA/emailAddress=open-tech@bloomberg.net
+        Validity
+            Not Before: Apr  2 06:00:00 2015 GMT
+            Not After : Apr  6 06:00:00 2015 GMT
+        Subject: C=US, ST=NY, L=New York, O=Bloomberg LP, OU=CTO Office, CN=lahacks_spring_2015_011/emailAddress=open-tech@bloomberg.net
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:be:ba:4e:11:c5:67:84:45:9a:ac:53:8a:ff:99:
+                    42:80:5b:f4:9b:4d:95:1b:f5:60:13:7d:f6:07:3b:
+                    8c:9c:74:52:be:8a:4b:8b:2a:c9:25:e9:0f:0d:27:
+                    f7:fb:0a:74:60:92:bf:15:ea:52:9f:0b:56:d4:2a:
+                    29:f6:a5:6c:60:b6:fb:9e:96:e0:15:20:ac:7e:56:
+                    55:a4:bb:fe:3f:a3:a5:0c:a0:d0:3b:ec:7a:f2:28:
+                    2e:db:14:04:74:90:e6:9a:e1:8c:a5:7e:fb:54:60:
+                    f9:31:da:28:fe:7b:f5:58:fe:25:39:53:97:3f:85:
+                    bd:2c:92:0c:12:b5:15:f7:ff
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                90:56:A1:1D:F5:A2:32:37:A3:20:D3:AE:BD:AE:16:C6:6A:32:73:3B
+            X509v3 Authority Key Identifier: 
+                keyid:F3:21:76:1F:DA:B5:E7:03:FC:ED:D7:71:B8:1C:55:2D:7E:65:5F:14
+                DirName:/C=US/ST=NY/L=New York/O=Bloomberg LP/OU=CTO Office/CN=Bloomberg LP CA/emailAddress=open-tech@bloomberg.net
+                serial:81:F3:7A:1C:BC:C6:E8:A2
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha1WithRSAEncryption
+        4e:27:0b:49:07:08:e8:ab:71:2e:1f:e1:8a:de:00:fe:d1:f1:
+        69:b7:63:41:e4:23:b7:1d:63:04:28:1d:3d:ac:93:a8:e9:cf:
+        00:b9:7b:4b:ac:2c:86:3b:eb:ee:99:58:d4:bc:d5:b3:52:5e:
+        90:cb:0d:01:20:db:b9:ed:a2:6a:30:c2:04:1d:1d:c0:22:6e:
+        4e:73:36:c0:2b:02:bf:0e:7f:71:51:54:74:37:1a:19:7e:16:
+        a8:40:99:e1:4f:2b:7c:28:92:71:c7:1e:1e:df:67:96:ce:6f:
+        7b:c8:bf:ee:ff:40:c6:16:a0:ea:6c:36:8b:f1:04:2d:99:99:
+        90:14
+-----BEGIN CERTIFICATE-----
+MIIECzCCA3SgAwIBAgICErQwDQYJKoZIhvcNAQEFBQAwgZsxCzAJBgNVBAYTAlVT
+MQswCQYDVQQIEwJOWTERMA8GA1UEBxMITmV3IFlvcmsxFTATBgNVBAoTDEJsb29t
+YmVyZyBMUDETMBEGA1UECxMKQ1RPIE9mZmljZTEYMBYGA1UEAxMPQmxvb21iZXJn
+IExQIENBMSYwJAYJKoZIhvcNAQkBFhdvcGVuLXRlY2hAYmxvb21iZXJnLm5ldDAe
+Fw0xNTA0MDIwNjAwMDBaFw0xNTA0MDYwNjAwMDBaMIGjMQswCQYDVQQGEwJVUzEL
+MAkGA1UECBMCTlkxETAPBgNVBAcTCE5ldyBZb3JrMRUwEwYDVQQKEwxCbG9vbWJl
+cmcgTFAxEzARBgNVBAsTCkNUTyBPZmZpY2UxIDAeBgNVBAMUF2xhaGFja3Nfc3By
+aW5nXzIwMTVfMDExMSYwJAYJKoZIhvcNAQkBFhdvcGVuLXRlY2hAYmxvb21iZXJn
+Lm5ldDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAvrpOEcVnhEWarFOK/5lC
+gFv0m02VG/VgE332BzuMnHRSvopLiyrJJekPDSf3+wp0YJK/FepSnwtW1Cop9qVs
+YLb7npbgFSCsflZVpLv+P6OlDKDQO+x68igu2xQEdJDmmuGMpX77VGD5Mdoo/nv1
+WP4lOVOXP4W9LJIMErUV9/8CAwEAAaOCAVIwggFOMAkGA1UdEwQCMAAwLQYJYIZI
+AYb4QgENBCAWHkVhc3ktUlNBIEdlbmVyYXRlZCBDZXJ0aWZpY2F0ZTAdBgNVHQ4E
+FgQUkFahHfWiMjejINOuva4WxmoyczswgdAGA1UdIwSByDCBxYAU8yF2H9q15wP8
+7ddxuBxVLX5lXxShgaGkgZ4wgZsxCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJOWTER
+MA8GA1UEBxMITmV3IFlvcmsxFTATBgNVBAoTDEJsb29tYmVyZyBMUDETMBEGA1UE
+CxMKQ1RPIE9mZmljZTEYMBYGA1UEAxMPQmxvb21iZXJnIExQIENBMSYwJAYJKoZI
+hvcNAQkBFhdvcGVuLXRlY2hAYmxvb21iZXJnLm5ldIIJAIHzehy8xuiiMBMGA1Ud
+JQQMMAoGCCsGAQUFBwMCMAsGA1UdDwQEAwIHgDANBgkqhkiG9w0BAQUFAAOBgQBO
+JwtJBwjoq3EuH+GK3gD+0fFpt2NB5CO3HWMEKB09rJOo6c8AuXtLrCyGO+vumVjU
+vNWzUl6Qyw0BINu57aJqMMIEHR3AIm5OczbAKwK/Dn9xUVR0NxoZfhaoQJnhTyt8
+KJJxxx4e32eWzm97yL/u/0DGFqDqbDaL8QQtmZmQFA==
+-----END CERTIFICATE-----
