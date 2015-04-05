@@ -15,7 +15,7 @@ app.config.update(
 def about():
 
 	title = "About Us"
-	paragraph = ["Hi, have fun!", "goodbye"]
+	paragraph = ["Hi, we are three ucla CSers", "have fun!"]
 		
 	try:
 		return render_template("about.html", title = title, paragraph=paragraph)
