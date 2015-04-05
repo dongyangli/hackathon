@@ -60,18 +60,15 @@ def homepage():
 		return str(e)
 
 
-@app.route('/download')
-def download():
-	return "hi download"
-	"""
-	csvname = request.form.get()
+@app.route('/download/<filename>', methods=['POST', 'GET'])
+def download(filename):
+	#return "hi download"
 	csv = ""
-	with open('csvname', 'r') as content_file:
+	with open('filename', 'r') as content_file:
     	csv = content_file.read()
-	
+	response.headers["Content-Disposition"] = "attachment; filename="+filename
 	response = make_response(csv)
 	return response
-	"""
 
 # launch
 if __name__ == "__main__":
