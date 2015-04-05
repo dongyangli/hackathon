@@ -67,7 +67,7 @@ def download():
 	with open(filename, 'r') as content_file:
 		#csv = content_file.read()
 		for line in content_file:
-			csv += line + "\n"
+			csv += (line + "\n")
 	return csv
 
 # launch
