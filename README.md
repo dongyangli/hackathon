@@ -6,9 +6,7 @@ The API provided by Bloomberg provides data to the user in JSON form. This forma
 
 
 #How to Use
-Recommended browser: Safari. 
-
-Recommended system: Desktop/Mobile
+Recommended system/browser: Desktop/Safari, Mobile/Chrome or Safari
 
 
 Access the web application [here](https://uclahilahack.herokuapp.com). You can choose multiple securities and multiple fields for the securities. For each security chosen, we will generate one csv file for you.
