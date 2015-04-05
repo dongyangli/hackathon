@@ -146,6 +146,12 @@
 		{% for p in paragraph %}
 		<p>{{ p }}</p>
 		{% endfor %}
+		
+		<form class="form-horizontal" method="POST" action="/download" accept-charset="unicode">
+			{% for file in files %}
+			<button name = {{ file }}>{{ file }}</button>
+			{% endfor %}
+		</form>
 
 </body>
 

@@ -31,8 +31,10 @@ def request(securities, fields, startDate, endDate, periodicity):
 
 def createTable(securities, fields, startDate, endDate, periodicity):
 	result = request(securities, fields, startDate, endDate, periodicity)
+	files = []
 	for i in range(0, len(securities)):
 		securityData = result['data'][i]['securityData']['fieldData']
+		files.append(securities[i]+'.csv')
 		with open(securities[i]+'.csv', 'wb') as csvfile:
 			writer = csv.writer(csvfile, delimiter=',')
 			writer.writerow(fields)
@@ -41,6 +43,8 @@ def createTable(securities, fields, startDate, endDate, periodicity):
 				for field in fields:
 					row.append(data[field])
 				writer.writerow(row)
+
+	return files
 
 if __name__ == "__main__":
 	securities = ["IBM US Equity", "AAPL US Equity"]

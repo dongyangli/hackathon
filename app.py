@@ -51,11 +51,28 @@ def homepage():
 		paragraph.append(radios)
 
 	try:
+		files = []
 		if selectmultipleSecurity and selectmultipleField and startDate and endDate and radios:
-			createTable(selectmultipleSecurity, selectmultipleField, startDate, endDate, radios)
-		return render_template("test.html", title = title, paragraph=paragraph)
+			files = createTable(selectmultipleSecurity, selectmultipleField, startDate, endDate, radios)
+
+		return render_template("test.html", title = title, paragraph=paragraph, files = files)
 	except Exception, e:
 		return str(e)
+
+
+@app.route('/download')
+def download():
+	return "hi download"
+	"""
+	csvname = request.form.get()
+	csv = ""
+	with open('csvname', 'r') as content_file:
+    	csv = content_file.read()
+	
+	response = make_response(csv)
+	return response
+	"""
+
 # launch
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
