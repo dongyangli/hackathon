@@ -64,6 +64,7 @@ def homepage():
 def download():
 	#return "hi download"
 	filename = request.form.get("button")
+	return filename
 	csv = ""
 	with open('filename', 'r') as content_file:
 		csv = content_file.read()
