@@ -65,7 +65,7 @@ def download(filename):
 	#return "hi download"
 	csv = ""
 	with open('filename', 'r') as content_file:
-    	csv = content_file.read()
+		csv = content_file.read()
 	response.headers["Content-Disposition"] = "attachment; filename="+filename
 	response = make_response(csv)
 	return response
