@@ -65,9 +65,7 @@ def download():
 	filename = request.form.get("button")
 	csv = ""
 	with open(filename, 'r') as content_file:
-		for line in content_file:
-			csv += line
-			csv += "\n"
+		csv = content_file.read()
 	return csv
 
 # launch
