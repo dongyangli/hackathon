@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template
-from flask import request
+from flask import request, make_response
 import CreateCsvTable
 from CreateCsvTable import createTable
 
@@ -63,6 +63,7 @@ def homepage():
 @app.route('/download/<filename>', methods=['POST', 'GET'])
 def download(filename):
 	#return "hi download"
+	return filename
 	csv = ""
 	with open('filename', 'r') as content_file:
 		csv = content_file.read()
