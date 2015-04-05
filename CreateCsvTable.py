@@ -46,7 +46,7 @@ def request(securities, fields, startDate, endDate, periodicity):
 
 def createTable(securities, fields, startDate, endDate, periodicity):
 
-	#delete_aged_files()
+	delete_aged_files()
 
 	result = request(securities, fields, startDate, endDate, periodicity)
 	files = []
