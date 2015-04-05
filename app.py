@@ -63,6 +63,7 @@ def homepage():
 @app.route('/download', methods=['POST', 'GET'])
 def download():
 	filename = request.form.get("button")
+	#return send_from_directory(directory=".", filename=filename)
 	csv = ""
 	with open(filename, 'r') as content_file:
 		contents = content_file.readlines()

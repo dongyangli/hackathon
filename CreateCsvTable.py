@@ -60,6 +60,7 @@ def createTable(securities, fields, startDate, endDate, periodicity):
 			writer.writerow(fields)
 			for data in securityData:
 				row = []
+				row.append(data["date"])
 				for field in fields:
 					row.append(data[field])
 				writer.writerow(row)
