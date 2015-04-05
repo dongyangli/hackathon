@@ -35,7 +35,7 @@ def createTable(securities, fields, startDate, endDate, periodicity):
 	for i in range(0, len(securities)):
 		securityData = result['data'][i]['securityData']['fieldData']
 		filename = securities[i]+'.csv'
-		filename.replace (" ", "_")
+		filename = filename.replace(" ", "_")
 		files.append(filename)
 		with open(filename, 'wb') as csvfile:
 			writer = csv.writer(csvfile, delimiter=',')
