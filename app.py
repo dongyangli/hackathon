@@ -66,7 +66,7 @@ def homepage():
 			title = "File Generated:"
 			files = createTable(selectmultipleSecurity, selectmultipleField, startDate, endDate, radios)
 		else:
-			paragraph = ["Nothing found, sorry"]
+			paragraph = ["Please specify each field properly to get the csv file."]
 		return render_template("test.html", title = title, paragraph=paragraph, files = files)
 	except Exception, e:
 		return str(e)
