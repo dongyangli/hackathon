@@ -5,7 +5,7 @@ This is a project for LA Hacks 2015, using Bloomberg API
 Recommended browser: Safari. 
 
 
-Recommended system: Desktope/Mobile
+Recommended system: Desktop/Mobile
 
 
 The web application is [here](https://uclahilahack.herokuapp.com). You can choose multiple securities and fields in security. And for each security, we will generate one csv file for you.
