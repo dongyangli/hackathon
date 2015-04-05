@@ -25,36 +25,48 @@ def about():
 @app.route('/', methods=['POST', 'GET'])
 def homepage():
 
-	title = "display input result"
+	title = ""
 	paragraph = []
 
 	selectmultipleSecurity = request.form.getlist("selectmultipleSecurity")
+	"""
 	if selectmultipleSecurity:
 		for security in selectmultipleSecurity:
 			paragraph.append(security)
+	"""
 
 	selectmultipleField = request.form.getlist("selectmultipleField")
+	"""
 	if selectmultipleField:
 		for field in selectmultipleField:
 			paragraph.append(field)
+	"""
 
 	startDate = request.form.get("startDate")
+	"""
 	if startDate:
 		paragraph.append(startDate)
+	"""
 
 	endDate = request.form.get("endDate")
+	"""
 	if endDate:
 		paragraph.append(endDate)
+	"""
 
 	radios = request.form.get("radios")
+	"""
 	if radios:
 		paragraph.append(radios)
+	"""
 
 	try:
 		files = []
 		if selectmultipleSecurity and selectmultipleField and startDate and endDate and radios:
+			title = "File Generated:"
 			files = createTable(selectmultipleSecurity, selectmultipleField, startDate, endDate, radios)
-
+		else:
+			paragraph = ["Nothing found, sorry"]
 		return render_template("test.html", title = title, paragraph=paragraph, files = files)
 	except Exception, e:
 		return str(e)
@@ -64,14 +76,6 @@ def homepage():
 def download():
 	filename = request.form.get("button")
 	return send_from_directory(directory=".", filename=filename)
-	"""
-	csv = ""
-	with open(filename, 'r') as content_file:
-		contents = content_file.readlines()
-		for line in contents:
-			csv += str(line)
-	return csv
-	"""
 
 # launch
 if __name__ == "__main__":
