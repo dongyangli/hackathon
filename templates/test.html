@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="./css/datepicker.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="./js/bootstrap-datepicker.js"></script>
+<script src="./js/jquery-1.9.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+<style type="text/css">
+		.bs-example{
+			margin: 20px;
+		}
+</style>
+</head>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/about">About</a></li>
+
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<body>
+<div class="bs-example">
+
+
+
+<form class="form-horizontal" method="POST" action="" accept-charset="UTF-8">
+	<fieldset>
+
+	<!-- Form Name -->
+	<legend>Grab Data from Bloomberg</legend>
+
+
+	<!-- Select Multiple -->
+	<div class="control-group">
+		<label class="control-label" for="selectmultipleSecurity">Select the Security</label>
+		<div class="controls">
+			<select id="selectmultipleSecurity" name="selectmultipleSecurity" class="input-xlarge" multiple="multiple">
+				<option>IBM US EquityOption two</option>
+				<option>AAPL US Equity</option>
+				<option>A</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- Select Multiple -->
+	<div class="control-group">
+		<label class="control-label" for="selectmultipleField">Fields</label>
+		<div class="controls">
+			<select id="selectmultipleField" name="selectmultipleField" class="input-xlarge" multiple="multiple">
+				<option>PX_LAST</option>
+				<option>OPEN</option>
+				<option>A</option>
+				<option>B</option>
+				<option>C</option>
+				<option>D</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- Text input-->
+	<div class="control-group">
+		<label class="control-label" for="startDate">Start Date</label>
+		<div class="controls">
+			<input id="startDate" name="startDate" type="text" placeholder="YYYYMMDD" class="input-xlarge">
+			
+		</div>
+	</div>
+
+	<!-- Text input-->
+	<div class="control-group">
+		<label class="control-label" for="endDate">End Date</label>
+		<div class="controls">
+			<input id="endDate" name="endDate" type="text" placeholder="YYYYMMDD" class="input-xlarge">
+			
+		</div>
+	</div>
+
+	<!-- Multiple Radios (inline) -->
+	<div class="control-group">
+		<label class="control-label" for="radios">Periodicity</label>
+		<div class="controls">
+			<label class="radio inline" for="radios-0">
+				<input type="radio" name="radios" id="radios-0" value="Yearly" checked="checked">
+				YEARLY
+			</label>
+			<label class="radio inline" for="radios-1">
+				<input type="radio" name="radios" id="radios-1" value="Monthly">
+				MONTHLY
+			</label>
+			<label class="radio inline" for="radios-2">
+				<input type="radio" name="radios" id="radios-2" value="Weekly">
+				WEEKLY
+			</label>
+			<label class="radio inline" for="radios-3">
+				<input type="radio" name="radios" id="radios-3" value="Daily">
+				DAILY
+			</label>
+		</div>
+	</div>
+
+	<!-- Button -->
+	<div class="control-group">
+		<label class="control-label" for="singlebutton"></label>
+		<div class="controls">
+			<button id="singlebutton" name="singlebutton" class="btn btn-primary">Get Table</button>
+		</div>
+	</div>
+
+	</fieldset>
+</form>
+
+<body>
+		<h3>{{ title }}</h3>
+		{% for p in paragraph %}
+		<p>{{ p }}</p>
+		{% endfor %}
+
+</body>
+
+
+
+</div>
+<script type="text/javascript">
+						// When the document is ready
+						$(document).ready(function () {
+								
+								$('#startDate').datepicker({
+										format: "dd/mm/yyyy"
+								});  
+						
+						});
+</script>
+
+
+
+				
+</body>
+</html>  
