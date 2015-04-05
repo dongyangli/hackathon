@@ -57,7 +57,7 @@ def createTable(securities, fields, startDate, endDate, periodicity):
 		files.append(filename)
 		with open(filename, 'wb') as csvfile:
 			writer = csv.writer(csvfile, delimiter=',')
-			writer.writerow(fields)
+			writer.writerow(['DATE'] + fields)
 			for data in securityData:
 				row = []
 				row.append(data["date"])
