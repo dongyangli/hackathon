@@ -8,7 +8,7 @@ import time
 import os
 import glob
 
-"""
+
 #delete file of certain ages
 def delete_aged_files():
 	one_hour_ago = time.time() - 10 # make it shorter so far for testing
@@ -16,11 +16,10 @@ def delete_aged_files():
 	os.chdir(folder)
 	for f in glob.glob("*.csv"):
 		st=os.stat(f)
-    	mtime=st.st_mtime
-    	if mtime < one_hour_ago:
-        	print('remove %s'%f)
-        	os.unlink(f)
-"""
+		mtime=st.st_mtime
+		if mtime < one_hour_ago:
+			print('remove %s'%f)
+			os.unlink(f)
 
 def request(securities, fields, startDate, endDate, periodicity):
 	req = urllib2.Request('https://http-api.openbloomberg.com/request?ns=blp&service=refdata&type=HistoricalDataRequest')
