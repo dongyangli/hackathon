@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template
-from flask import request, make_response
+from flask import request
 import CreateCsvTable
 from CreateCsvTable import createTable
 
@@ -64,11 +64,9 @@ def homepage():
 def download():
 	filename = request.form.get("button")
 	csv = ""
-	with open('filename', 'r') as content_file:
+	with open(filename, 'r') as content_file:
 		csv = content_file.read()
-	response.headers["Content-Disposition"] = "attachment; filename="+filename
-	response = make_response(csv)
-	return response
+	return csv
 
 # launch
 if __name__ == "__main__":
