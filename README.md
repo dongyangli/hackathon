@@ -11,7 +11,7 @@ Recommended browser: Safari.
 Recommended system: Desktop/Mobile
 
 
-The web application is [here](https://uclahilahack.herokuapp.com). You can choose multiple securities and multiple fields for the securities. For each security chosen, we will generate one csv file for you.
+Access the web application [here](https://uclahilahack.herokuapp.com). You can choose multiple securities and multiple fields for the securities. For each security chosen, we will generate one csv file for you.
 
 
-To run the code locally, you need to have python(2.7+) and Flask installed. Clone the repo and run `python app.py` in shell. Then open Safari and type in `localhost:5000`.
+To run the code locally, you need to have Python (2.7+) and Flask installed. Clone the repo and run `python app.py` in shell. Then open Safari and type in `localhost:5000`.
