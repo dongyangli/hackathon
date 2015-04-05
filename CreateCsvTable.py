@@ -18,8 +18,7 @@ def delete_aged_files():
 		st=os.stat(f)
 		mtime=st.st_mtime
 		if mtime < one_hour_ago:
-			print('remove %s'%f)
-			#os.unlink(f)
+			os.unlink(f)
 
 def request(securities, fields, startDate, endDate, periodicity):
 	req = urllib2.Request('https://http-api.openbloomberg.com/request?ns=blp&service=refdata&type=HistoricalDataRequest')
