@@ -26,7 +26,7 @@ def about():
 def homepage():
 
 	title = "display input result"
-	paragraph = ["so for nothing"]
+	paragraph = []
 
 	selectmultipleSecurity = request.form.getlist("selectmultipleSecurity")
 	if selectmultipleSecurity:
@@ -66,7 +66,8 @@ def download():
 	csv = ""
 	with open(filename, 'r') as content_file:
 		for line in content_file:
-			csv += line + "\n"
+			csv += line
+			csv += "\n"
 	return csv
 
 # launch
