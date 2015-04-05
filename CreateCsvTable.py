@@ -4,6 +4,23 @@ import ssl
 import sys
 import urllib2
 import csv
+import time
+import os
+import glob
+
+
+#delete file of certain ages
+def delete_aged_files():
+	one_hour_ago = time.time() - 10 # make it shorter so far for testing
+	folder = '.'
+	os.chdir(folder)
+	for f in glob.glob("*.csv"):
+		st=os.stat(f)
+    	mtime=st.st_mtime
+    	if mtime < one_hour_ago:
+        	print('remove %s'%f)
+        	os.unlink(f)
+
 
 def request(securities, fields, startDate, endDate, periodicity):
 	req = urllib2.Request('https://http-api.openbloomberg.com/request?ns=blp&service=refdata&type=HistoricalDataRequest')
@@ -30,6 +47,9 @@ def request(securities, fields, startDate, endDate, periodicity):
 	return(json.loads(res.read()))
 
 def createTable(securities, fields, startDate, endDate, periodicity):
+
+	#delete_aged_files()
+
 	result = request(securities, fields, startDate, endDate, periodicity)
 	files = []
 	for i in range(0, len(securities)):
