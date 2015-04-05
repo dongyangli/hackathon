@@ -147,9 +147,9 @@
 		<p>{{ p }}</p>
 		{% endfor %}
 		
-		<form class="form-horizontal" method="GET" action="/download" accept-charset="unicode" target="_blank">
+		<form class="form-horizontal" method="POST" action="/download" accept-charset="unicode" target="_blank">
 			{% for file in files %}
-			<button type="submit" name = {{ file }}>{{ file }}</button>
+			<button type="submit" name = "button" value = {{ file }}>{{ file }}</button>
 			{% endfor %}
 		</form>
 

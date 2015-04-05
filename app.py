@@ -60,10 +60,10 @@ def homepage():
 		return str(e)
 
 
-@app.route('/download/<filename>', methods=['POST', 'GET'])
-def download(filename):
+@app.route('/download', methods=['POST', 'GET'])
+def download():
 	#return "hi download"
-	return filename
+	filename = request.form.get("button")
 	csv = ""
 	with open('filename', 'r') as content_file:
 		csv = content_file.read()
